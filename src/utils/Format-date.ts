@@ -21,7 +21,6 @@ export const formatDate = (time: string) => {
 
   const day = String(date.getUTCDate()).padStart(2, '0')
   const hours = String(date.getUTCHours()).padStart(2, '0')
-  const minutes = String(date.getUTCMinutes()).padStart(2, '0')
 
   if (Number(hours) > 12) {
     return `${month} ${day}, ${year}`
