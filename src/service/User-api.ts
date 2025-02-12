@@ -4,7 +4,7 @@ import {
   CheckNicknameResponse,
 } from '../types/user/user'
 
-const baseUrl = 'http://127.0.0.1:3000/api/users'
+const baseUrl = import.meta.env.VITE_APP_USER_URL
 
 export async function getSessionUser(): Promise<SessionUserResponse | null> {
   try {
@@ -59,4 +59,3 @@ export async function checkNicknameDuplicate(
     return { code: 500, message: '서버와의 통신에 실패했습니다.' }
   }
 }
-

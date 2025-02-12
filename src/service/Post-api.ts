@@ -1,6 +1,6 @@
 import { GetPostsResponse } from '../types/post/post'
 
-const baseUrl = 'http://127.0.0.1:3000/api/posts'
+const baseUrl = import.meta.env.VITE_APP_POST_URL
 
 export async function getPosts(
   page: number,
